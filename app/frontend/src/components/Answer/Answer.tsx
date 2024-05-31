@@ -26,8 +26,6 @@ export const Answer = ({
     isSelected,
     isStreaming,
     onCitationClicked,
-    onThoughtProcessClicked,
-    onSupportingContentClicked,
     onFollowupQuestionClicked,
     showFollowupQuestions,
     showSpeechOutput,
@@ -50,7 +48,6 @@ export const Answer = ({
                             iconProps={{ iconName: "Lightbulb" }}
                             title="Show thought process"
                             ariaLabel="Show thought process"
-                            onClick={() => onThoughtProcessClicked()}
                             disabled={!answer.choices[0].context.thoughts?.length}
                         />
                         <IconButton
@@ -58,7 +55,6 @@ export const Answer = ({
                             iconProps={{ iconName: "ClipboardList" }}
                             title="Show supporting content"
                             ariaLabel="Show supporting content"
-                            onClick={() => onSupportingContentClicked()}
                             disabled={!answer.choices[0].context.data_points}
                         />
                         {showSpeechOutput && <SpeechOutput url={speechUrl} />}

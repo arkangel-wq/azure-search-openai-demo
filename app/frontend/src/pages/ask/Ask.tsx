@@ -237,8 +237,6 @@ export function Component(): JSX.Element {
                             answer={answer}
                             isStreaming={false}
                             onCitationClicked={x => onShowCitation(x)}
-                            onThoughtProcessClicked={() => onToggleTab(AnalysisPanelTabs.ThoughtProcessTab)}
-                            onSupportingContentClicked={() => onToggleTab(AnalysisPanelTabs.SupportingContentTab)}
                             showSpeechOutput={showSpeechOutput}
                             speechUrl={speechUrl}
                         />
