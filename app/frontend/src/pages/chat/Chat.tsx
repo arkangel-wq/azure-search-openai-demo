@@ -331,6 +331,8 @@ const Chat = () => {
                                                 isSelected={false}
                                                 onCitationClicked={c => onShowCitation(c, index)}
                                                 onFollowupQuestionClicked={q => makeApiRequest(q)}
+                                                onThoughtProcessClicked={() => onToggleTab(AnalysisPanelTabs.ThoughtProcessTab, index)}
+                                                onSupportingContentClicked={() => onToggleTab(AnalysisPanelTabs.SupportingContentTab, index)}
                                                 showFollowupQuestions={useSuggestFollowupQuestions && answers.length - 1 === index}
                                                 showSpeechOutput={showSpeechOutput}
                                                 speechUrl={speechUrls[index]}
@@ -350,6 +352,8 @@ const Chat = () => {
                                                 isSelected={selectedAnswer === index && activeAnalysisPanelTab !== undefined}
                                                 onCitationClicked={c => onShowCitation(c, index)}
                                                 onFollowupQuestionClicked={q => makeApiRequest(q)}
+                                                onThoughtProcessClicked={() => onToggleTab(AnalysisPanelTabs.ThoughtProcessTab, index)}	
+                                                onSupportingContentClicked={() => onToggleTab(AnalysisPanelTabs.SupportingContentTab, index)}
                                                 showFollowupQuestions={useSuggestFollowupQuestions && answers.length - 1 === index}
                                                 showSpeechOutput={showSpeechOutput}
                                                 speechUrl={speechUrls[index]}
